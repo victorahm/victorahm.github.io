@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Victor Herrera — Software Developer</title>
+  <meta name="description" content="Personal website of Victor Herrera: experience, knowledge and interests.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1f2933;
+      --muted: #52606d;
+      --accent: #0b6bcb;
+      --border: #e4e7eb;
+      --surface: #f7f9fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--fg);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      margin: 0;
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    main { padding: 2rem 0 3rem; }
+
+    section { padding: 1.75rem 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 1rem;
+      color: var(--fg);
+    }
+
+    p { margin: 0 0 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { margin: 0; padding-left: 1.25rem; }
+    li { margin-bottom: 0.5rem; }
+    li:last-child { margin-bottom: 0; }
+
+    .item { margin-bottom: 1.25rem; }
+    .item:last-child { margin-bottom: 0; }
+    .item h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+    .item .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.35rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
+    .tags li {
+      margin: 0;
+      padding: 0.25rem 0.7rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+    nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav a:hover, a:hover { text-decoration: underline; }
+
+    footer {
+      padding: 1.5rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --fg: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #60a5fa;
+        --border: #1f2937;
+        --surface: #1a2233;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Victor Herrera</h1>
+      <p class="tagline">Software Developer</p>
+      <p class="subtitle">
+        I build and maintain web applications with Ruby on Rails, CMS plugins and
+        integrations between open source tools. This is my corner of the internet:
+        a bit about my experience, what I know and what I like.
+      </p>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#knowledge">Knowledge</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        I'm Victor Herrera, a software developer focused on the web. Most of my work
+        revolves around Ruby on Rails applications and the ecosystem around them:
+        content management, project management tools, plugins and integrations that
+        make those platforms fit real-world needs.
+      </p>
+      <p>
+        I like small, understandable codebases, clear documentation and tools that
+        other people can actually pick up and use.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <h3>Web application development</h3>
+        <p class="meta">Ruby on Rails</p>
+        <p>
+          Designing, building and maintaining Rails applications — models, APIs,
+          background jobs, authentication and the day-to-day work of keeping a
+          production app healthy.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>CMS &amp; plugin development</h3>
+        <p class="meta">CamaleonCMS · Redmine</p>
+        <p>
+          Extending content management and project management platforms with custom
+          plugins: shortcodes, hooks, admin panels and integrations.
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>Open source contribution</h3>
+        <p class="meta">Community</p>
+        <p>
+          Contributing to and maintaining open source projects around the Rails
+          ecosystem, from UI components to geocoding and authentication libraries.
+        </p>
+      </div>
+    </section>
+
+    <section id="knowledge">
+      <h2>Knowledge</h2>
+      <ul class="tags">
+        <li>Ruby</li>
+        <li>Ruby on Rails</li>
+        <li>CamaleonCMS</li>
+        <li>Redmine</li>
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript</li>
+        <li>SQL / Databases</li>
+        <li>REST APIs</li>
+        <li>Git &amp; GitHub</li>
+        <li>Linux</li>
+        <li>Testing (Minitest, RSpec)</li>
+        <li>CI / Automation</li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <ul>
+        <li>Open source software and the communities around it</li>
+        <li>Tooling that makes developers more productive</li>
+        <li>Writing clear documentation and agent-friendly repositories</li>
+        <li>Automation, scripts and small utilities that remove repetitive work</li>
+        <li>Continuous learning: new languages, frameworks and ideas</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Feel free to reach out:
+        <a href="mailto:victorahm@gmail.com">victorahm@gmail.com</a> ·
+        <a href="https://github.com/victorahm">github.com/victorahm</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year">2026</span> Victor Herrera. Built with plain HTML &amp; CSS, published on GitHub Pages.</p>
+    </div>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
