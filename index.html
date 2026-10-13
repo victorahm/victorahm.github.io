@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Victor Herrera — Software Developer</title>
-  <meta name="description" content="Personal website of Victor Herrera: experience, knowledge and interests.">
+  <title>Víctor Herrera — Software Developer</title>
+  <meta name="description" content="Personal website of Víctor Herrera: experience, knowledge and interests.">
   <style>
     :root {
       --bg: #ffffff;
@@ -37,21 +37,43 @@
       background: var(--surface);
     }
 
+    .header-content {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      flex-shrink: 0;
+    }
+
     h1 {
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.25rem;
       font-size: 2.4rem;
       line-height: 1.2;
     }
 
     .tagline {
-      margin: 0;
+      margin: 0 0 0.5rem;
       font-size: 1.15rem;
       color: var(--accent);
       font-weight: 600;
     }
 
+    .location {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .subtitle {
-      margin: 0.75rem 0 0;
+      margin: 0;
       color: var(--muted);
       max-width: 60ch;
     }
@@ -90,9 +112,20 @@
       color: var(--muted);
     }
 
+    .skill-group { margin-bottom: 1rem; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group h4 { margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
     nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
     nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
     nav a:hover, a:hover { text-decoration: underline; }
+
+    .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
+    .contact-links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    .awards-list { list-style: none; padding: 0; }
+    .awards-list li { padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem; }
+    .awards-list li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
 
     footer {
       padding: 1.5rem 0 3rem;
@@ -111,27 +144,39 @@
         --surface: #1a2233;
       }
     }
+
+    @media (max-width: 600px) {
+      .header-content { flex-direction: column; align-items: center; text-align: center; }
+      .photo { margin-bottom: 1rem; }
+      h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Victor Herrera</h1>
-      <p class="tagline">Software Developer</p>
-      <p class="subtitle">
-        I build and maintain web applications with Ruby on Rails, CMS plugins and
-        integrations between open source tools. This is my corner of the internet:
-        a bit about my experience, what I know and what I like.
-      </p>
-      <nav aria-label="Sections">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#knowledge">Knowledge</a></li>
-          <li><a href="#interests">Interests</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-content">
+        <img src="victor.jpg" alt="Víctor Herrera" class="photo">
+        <div>
+          <h1>Víctor Herrera</h1>
+          <p class="tagline">Computer Engineer, Rails Developer & Geek</p>
+          <p class="location">Tlaxcala, México</p>
+          <p class="subtitle">
+            Senior Ruby on Rails & Cloud Engineer with 14+ years of experience architecting scalable web applications, migrating cloud infrastructure to AWS ECS, and integrating modern AI agents and LLM APIs into production systems.
+          </p>
+          <nav aria-label="Sections">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#knowledge">Knowledge</a></li>
+              <li><a href="#languages">Languages</a></li>
+              <li><a href="#interests">Interests</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -139,7 +184,7 @@
     <section id="about">
       <h2>About me</h2>
       <p>
-        I'm Victor Herrera, a software developer focused on the web. Most of my work
+        I'm Víctor Herrera, a software developer focused on the web. Most of my work
         revolves around Ruby on Rails applications and the ecosystem around them:
         content management, project management tools, plugins and integrations that
         make those platforms fit real-world needs.
@@ -154,76 +199,235 @@
       <h2>Experience</h2>
 
       <div class="item">
-        <h3>Web application development</h3>
-        <p class="meta">Ruby on Rails</p>
-        <p>
-          Designing, building and maintaining Rails applications — models, APIs,
-          background jobs, authentication and the day-to-day work of keeping a
-          production app healthy.
-        </p>
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">Mitratech — Guadalajara, México (Nov 2024 – Sep 2026)</p>
+        <ul>
+          <li>Migrated infrastructure from EC2 (Chef, Capistrano) to ECS with Terraform, cutting deploy time and eliminating environment drift</li>
+          <li>Containerized Rails apps for dev, test, and prod, reducing onboarding setup from one week to two hours</li>
+          <li>Built GitHub Actions CD pipelines to AWS ECS, enabling zero-downtime releases on every merge</li>
+          <li>Designed AI agent skills that automate development and deployment processes</li>
+          <li>Managed the AWS estate (ECS, RDS, S3, Secrets Manager) with least-privilege security groups and IaC-defined task definitions</li>
+        </ul>
       </div>
 
       <div class="item">
-        <h3>CMS &amp; plugin development</h3>
-        <p class="meta">CamaleonCMS · Redmine</p>
-        <p>
-          Extending content management and project management platforms with custom
-          plugins: shortcodes, hooks, admin panels and integrations.
-        </p>
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">SmartFit — CDMX, México (Jul 2021 – Aug 2024)</p>
+        <ul>
+          <li>Integrated a digital contract signing API, reducing contract turnaround to minutes</li>
+          <li>Automated PDF contract generation from HTML templates, letting the legal team edit contracts without a development team</li>
+          <li>Built a Stimulus-powered WYSIWYG editor, letting non-technical users edit content without developer help</li>
+        </ul>
       </div>
 
       <div class="item">
-        <h3>Open source contribution</h3>
-        <p class="meta">Community</p>
-        <p>
-          Contributing to and maintaining open source projects around the Rails
-          ecosystem, from UI components to geocoding and authentication libraries.
-        </p>
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">Kikoya — CDMX, México (Jul 2019 – Jul 2021)</p>
+        <ul>
+          <li>Built a Know Your Customer (KYC) platform in Ruby on Rails that automated identity verification for applicants</li>
+          <li>Designed Rails and Flask microservices with clean APIs, isolating risk domains and enabling independent scaling</li>
+          <li>Integrated Kairos and Google Vision to auto-verify faces and document data</li>
+          <li>Trained CNNs (Keras, TensorFlow) to extract data from IDs and contracts, replacing manual data entry</li>
+          <li>Captured webcam photos in HTML5/JavaScript for in-browser identity capture, removing native-app dependencies</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">Software Next Door — Querétaro, México (Dec 2016 – May 2019)</p>
+        <ul>
+          <li>Delivered several e-commerce stores on Spree</li>
+          <li>Built a CMS (Rails, MongoDB) powering content with different data and structure</li>
+          <li>Shipped a customer-engagement analytics pipeline (Rails, PostgreSQL, Redshift) processing data from IoT devices</li>
+          <li>Built REST and GraphQL APIs serving mobile and web clients from a single Rails codebase, avoiding duplicated business logic</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">Interactivo 3 — Monterrey, México (Dec 2014 – Nov 2016)</p>
+        <ul>
+          <li>Built a Video on Demand platform for indie movies</li>
+          <li>Integrated OpenPay and PayPal, enabling secure online payments and unlocking subscription revenue</li>
+          <li>Built role-based permissions and an in-platform social network</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">Etherpros — Tlaxcala, México (Mar 2014 – Jun 2014)</p>
+        <ul>
+          <li>Built and launched an e-commerce site selling online courses with Spree, enabling direct-to-consumer sales</li>
+          <li>Integrated payment gateways and Salesforce API, syncing orders and customers into the sales funnel automatically</li>
+          <li>Added Elasticsearch and Alchemy full-text search, cutting product discovery time and improving conversion</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Ruby on Rails Developer</h3>
+        <p class="meta">Sonata Services — Tijuana, México (Nov 2013 – Feb 2014)</p>
+        <ul>
+          <li>Built a CRM platform (Rails) with REST APIs powering Android and iOS apps from one backend</li>
+          <li>Designed a custom-object schema letting customers define their own content types</li>
+          <li>Standardized API contracts across mobile clients, reducing integration bugs and rework</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Web Developer</h3>
+        <p class="meta">Nextlevel — Querétaro, México (Oct 2012 – May 2013)</p>
+        <ul>
+          <li>Migrated legacy PHP applications to Ruby on Rails, modernizing the stack and cutting maintenance costs</li>
+          <li>Built a GPS tracking system (Rails, Google Maps) with live location updates</li>
+          <li>Delivered web applications in PHP and Rails across several client projects on schedule</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Web Developer</h3>
+        <p class="meta">Freelance — Tlaxcala, México (Jul 2012 – Oct 2012)</p>
+        <ul>
+          <li>Shipped PHP and Rails web applications for local businesses, from scoping to deployment</li>
+          <li>Built a Java desktop application for parking meters</li>
+          <li>Prototyped AI systems for research: reinforcement learning, conversational agents, and particle swarm optimization</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>.NET Developer</h3>
+        <p class="meta">ACF Technologies — Tlaxcala, México (Feb 2010 – Jun 2012)</p>
+        <ul>
+          <li>Delivered .NET applications across web, desktop, Windows services, and web services for several clients</li>
+          <li>Applied fuzzy logic to a bank's queue management system, reducing wait times and balancing agent load</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item">
+        <h3>B.Sc. in Computer Engineering</h3>
+        <p class="meta">Universidad Autónoma de Tlaxcala (June 2005 – January 2010)</p>
       </div>
     </section>
 
     <section id="knowledge">
       <h2>Knowledge</h2>
+
+      <div class="skill-group">
+        <h4>Web & APIs</h4>
+        <ul class="tags">
+          <li>Ruby</li>
+          <li>Ruby on Rails</li>
+          <li>RSpec</li>
+          <li>Devise</li>
+          <li>Spree</li>
+          <li>GraphQL</li>
+          <li>REST APIs</li>
+          <li>Microservices</li>
+          <li>Flask</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Cloud & DevOps</h4>
+        <ul class="tags">
+          <li>AWS</li>
+          <li>Terraform</li>
+          <li>Docker</li>
+          <li>GitHub Actions</li>
+          <li>Heroku</li>
+          <li>CI/CD</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Front-end</h4>
+        <ul class="tags">
+          <li>JavaScript</li>
+          <li>Stimulus</li>
+          <li>Haml/Slim</li>
+          <li>HTML5/CSS3</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Databases</h4>
+        <ul class="tags">
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>SQL Server</li>
+          <li>SQLite</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Practices</h4>
+        <ul class="tags">
+          <li>AI Agents</li>
+          <li>LLM Integration</li>
+          <li>SDD</li>
+          <li>TDD/BDD</li>
+          <li>Scrum</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
       <ul class="tags">
-        <li>Ruby</li>
-        <li>Ruby on Rails</li>
-        <li>CamaleonCMS</li>
-        <li>Redmine</li>
-        <li>HTML &amp; CSS</li>
-        <li>JavaScript</li>
-        <li>SQL / Databases</li>
-        <li>REST APIs</li>
-        <li>Git &amp; GitHub</li>
-        <li>Linux</li>
-        <li>Testing (Minitest, RSpec)</li>
-        <li>CI / Automation</li>
+        <li>Spanish (Native)</li>
+        <li>English (B2)</li>
       </ul>
     </section>
 
     <section id="interests">
       <h2>Interests</h2>
-      <ul>
-        <li>Open source software and the communities around it</li>
-        <li>Tooling that makes developers more productive</li>
-        <li>Writing clear documentation and agent-friendly repositories</li>
-        <li>Automation, scripts and small utilities that remove repetitive work</li>
-        <li>Continuous learning: new languages, frameworks and ideas</li>
+
+      <div class="skill-group">
+        <h4>Technical</h4>
+        <ul class="tags">
+          <li>Ruby on Rails</li>
+          <li>SDD</li>
+          <li>AI Agents</li>
+          <li>AWS</li>
+          <li>Neural Networks</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Hobbies</h4>
+        <ul class="tags">
+          <li>Reading</li>
+          <li>Running</li>
+          <li>Music</li>
+          <li>Pets</li>
+        </ul>
+      </div>
+
+      <h4 style="margin-top: 1rem;">Awards</h4>
+      <ul class="awards-list">
+        <li>Third place — ACM Contest, Querétaro, México (Jun 2009)</li>
+        <li>Second place — X Mexican Olympiad in Informatics, Durango, México (Jun 2005)</li>
       </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>
-        Feel free to reach out:
-        <a href="mailto:victorahm@gmail.com">victorahm@gmail.com</a> ·
-        <a href="https://github.com/victorahm">github.com/victorahm</a>
-      </p>
+      <p>Feel free to reach out:</p>
+      <div class="contact-links">
+        <a href="mailto:victorahm@gmail.com">victorahm@gmail.com</a>
+        <a href="https://github.com/victorahm" rel="noopener">github.com/victorahm</a>
+        <a href="https://linkedin.com/in/victor-alejandro-herrera" rel="noopener">linkedin.com/in/victor-alejandro-herrera</a>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© <span id="year">2026</span> Victor Herrera. Built with plain HTML &amp; CSS, published on GitHub Pages.</p>
+      <p>© <span id="year">2026</span> Víctor Herrera. Built with plain HTML & CSS, published on GitHub Pages.</p>
     </div>
     <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   </footer>
