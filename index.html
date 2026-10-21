@@ -119,6 +119,26 @@
     .skill-group:last-child { margin-bottom: 0; }
     .skill-group h4 { margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
+    .skill-group.cv {
+      display: grid;
+      grid-template-columns: minmax(11rem, 15rem) 1fr;
+      gap: 0.35rem 1.5rem;
+      align-items: baseline;
+      margin-bottom: 0;
+      padding: 0.7rem 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .skill-group.cv:last-of-type { border-bottom: none; padding-bottom: 0; }
+    .skill-group.cv h4 {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--accent);
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 700;
+    }
+    .skill-group.cv p { margin: 0; color: var(--muted); }
+
     nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
     nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
     nav a:hover, a:hover { text-decoration: underline; }
@@ -153,6 +173,7 @@
       .header-content { flex-direction: column; align-items: center; text-align: center; }
       .photo { margin-bottom: 1rem; }
       h1 { font-size: 1.8rem; }
+      .skill-group.cv { grid-template-columns: 1fr; gap: 0.15rem; }
     }
   </style>
 </head>
@@ -202,64 +223,34 @@
     <section id="knowledge">
       <h2>Knowledge</h2>
 
-      <div class="skill-group">
-        <h4>Web & APIs</h4>
-        <ul class="tags">
-          <li>Ruby</li>
-          <li>Ruby on Rails</li>
-          <li>RSpec</li>
-          <li>Devise</li>
-          <li>Spree</li>
-          <li>GraphQL</li>
-          <li>REST APIs</li>
-          <li>Microservices</li>
-          <li>Flask</li>
-          <li>Python</li>
-        </ul>
+      <div class="skill-group cv">
+        <h4>Languages &amp; Frameworks</h4>
+        <p>Ruby, Ruby on Rails (5/6/7/8), SQL, JavaScript, HTML5/CSS3, Haml/Slim, Stimulus, Flask, Python</p>
       </div>
 
-      <div class="skill-group">
-        <h4>Cloud & DevOps</h4>
-        <ul class="tags">
-          <li>AWS</li>
-          <li>Terraform</li>
-          <li>Docker</li>
-          <li>GitHub Actions</li>
-          <li>Heroku</li>
-          <li>CI/CD</li>
-        </ul>
+      <div class="skill-group cv">
+        <h4>Backend Architecture &amp; APIs</h4>
+        <p>Distributed Systems, REST &amp; GraphQL APIs, Asynchronous Processing (Sidekiq, Redis), Microservices, Devise, Spree, TDD/BDD (RSpec)</p>
       </div>
 
-      <div class="skill-group">
-        <h4>Front-end</h4>
-        <ul class="tags">
-          <li>JavaScript</li>
-          <li>Stimulus</li>
-          <li>Haml/Slim</li>
-          <li>HTML5/CSS3</li>
-        </ul>
+      <div class="skill-group cv">
+        <h4>Cloud &amp; DevOps</h4>
+        <p>AWS (ECS, RDS, S3, Secrets Manager), Terraform, Podman, Docker, GitHub Actions, CI/CD Pipelines, Heroku, Linux</p>
       </div>
 
-      <div class="skill-group">
-        <h4>Databases</h4>
-        <ul class="tags">
-          <li>PostgreSQL</li>
-          <li>MySQL</li>
-          <li>MongoDB</li>
-          <li>SQL Server</li>
-          <li>SQLite</li>
-        </ul>
+      <div class="skill-group cv">
+        <h4>Databases &amp; Data Storage</h4>
+        <p>PostgreSQL (Schema Design, Indexing, Query Optimization), MySQL, Redis (Caching, Locking), MongoDB, SQL Server, SQLite</p>
       </div>
 
-      <div class="skill-group">
+      <div class="skill-group cv">
+        <h4>AI &amp; Agentic Workflows</h4>
+        <p>AI Agent Integrations, LLM APIs &amp; Tool-Calling, Agentic Engineering Workflows (Cursor, Claude Code), TensorFlow/Keras</p>
+      </div>
+
+      <div class="skill-group cv">
         <h4>Practices</h4>
-        <ul class="tags">
-          <li>AI Agents</li>
-          <li>LLM Integration</li>
-          <li>SDD</li>
-          <li>TDD/BDD</li>
-          <li>Scrum</li>
-        </ul>
+        <p>SDD, Scrum</p>
       </div>
     </section>
 
