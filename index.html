@@ -13,6 +13,7 @@
       --accent: #0b6bcb;
       --border: #e4e7eb;
       --surface: #f7f9fb;
+      --header-overlay: rgba(255, 255, 255, 0.82);
     }
 
     * { box-sizing: border-box; }
@@ -34,7 +35,9 @@
     header {
       padding: 4rem 0 3rem;
       border-bottom: 1px solid var(--border);
-      background: var(--surface);
+      background:
+        linear-gradient(var(--header-overlay), var(--header-overlay)),
+        url("background.jpg") center / cover no-repeat var(--surface);
     }
 
     .header-content {
@@ -142,6 +145,7 @@
         --accent: #60a5fa;
         --border: #1f2937;
         --surface: #1a2233;
+        --header-overlay: rgba(17, 24, 39, 0.82);
       }
     }
 
